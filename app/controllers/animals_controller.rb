@@ -32,7 +32,7 @@ class AnimalsController < ApplicationController
         animal = Animal.find(params[:id])
         animal.update(animal_params)
         if animal.valid?
-            render jeson: animal
+            render json: animal
         else
             render json: animal.errors
         end 
